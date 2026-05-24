@@ -1,6 +1,6 @@
 ---
 name: motion-archaeologist
-description: Motion architecture analyst. ALWAYS invoke when the user asks how a website's animation or motion is built. Always extract keyframe or shape data — and report technique.
+description: Use this skill when the user asks how a website's animation, motion, or scroll effect is built — for any URL or site name. Triggers on phrases like "how does X animate", "what's the motion stack on Y", "reverse-engineer the scroll effect at Z", "teardown the animation on example.com", "rip the Lottie from this page", "how did they build the hero on lovefrom.com". The skill lifts the underlying animation assets to disk and reports the technique.
 allowed-tools:
   - Bash
   - Read
@@ -71,21 +71,13 @@ Helper: `scripts/replicate.sh <url>` automates 1–3.
 
 ### 4. IDENTIFY the animation framework
 
-Probe in this order — **first hit wins**:
+Run `scripts/probe-engine.sh <workspace>` — first hit wins from 9
+engine signatures (Lottie raw, Lottie inlined, GSAP, Framer Motion, Web
+Animations API, Anime.js, Three.js, CSS `@keyframes`, custom procedural).
 
-| # | Engine | Detection signal |
-|---|---|---|
-| a | Lottie/bodymovin raw | `grep '"v":"5.', '"fr":', '"ip":', '"op":', '"markers":'` in JS/JSON |
-| b | Lottie in bundle (object literal) | `grep '{[^{}]*\bip:[A-Za-z0-9_$]+,op:[A-Za-z0-9_$]+'` |
-| c | GSAP | `grep 'gsap\.', 'TweenLite', 'TimelineMax', 'ScrollTrigger'` |
-| d | Framer Motion | `grep 'framer-motion', 'motion\.'` |
-| e | Web Animations API | `grep '\.animate(', 'KeyframeEffect'` |
-| f | Anime.js | `grep 'anime('` |
-| g | Three.js / WebGL | `grep 'THREE\.', '@react-three'` |
-| h | CSS `@keyframes` | `grep '@keyframes'` in stylesheets |
-| i | Custom procedural engine | no library signatures + large class-heavy bundles + bone/transform-vector data structures |
-
-Helper: `scripts/probe-engine.sh <workspace>` runs all 9 probes.
+Full probe table + per-engine corner cases:
+`references/engine-detection.md` — load only if a probe fails or returns
+unexpected results.
 
 ### 5. EXTRACT animation data per engine type
 
