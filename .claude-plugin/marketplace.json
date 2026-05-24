@@ -1,0 +1,16 @@
+{
+  "name": "enact-plugins",
+  "owner": {
+    "name": "EnactSkill",
+    "url": "https://enactskill.com"
+  },
+  "url": "https://enactskill.com/plugins",
+  "plugins": [
+    {
+      "name": "motion-archaeologist",
+      "source": "./motion-archaeologist",
+      "description": "Motion architecture analyst. Reverse-engineers how any website's animation is built and lifts the underlying keyframe / shape data to disk.",
+      "version": "0.1.0"
+    }
+  ]
+}
