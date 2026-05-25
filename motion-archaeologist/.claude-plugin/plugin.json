@@ -6,8 +6,8 @@
     "name": "EnactSkill",
     "url": "https://enactskill.com"
   },
-  "homepage": "https://github.com/EnactSkill/enact-plugins",
-  "repository": "https://github.com/EnactSkill/enact-plugins",
+  "homepage": "https://github.com/pauldabrowski85/enact-plugins",
+  "repository": "https://github.com/pauldabrowski85/enact-plugins",
   "license": "Apache-2.0",
   "keywords": [
     "animation",

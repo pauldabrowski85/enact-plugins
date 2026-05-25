@@ -29,7 +29,7 @@ lifted assets. Technique-without-asset is a failed run.
 ## Install
 
 ```
-/plugin marketplace add https://github.com/EnactSkill/enact-plugins.git
+/plugin marketplace add https://github.com/pauldabrowski85/enact-plugins.git
 /plugin install motion-archaeologist@enact-plugins
 ```
 
@@ -73,4 +73,4 @@ Apache-2.0. See [LICENSE](LICENSE).
 ## Author
 
 [EnactSkill LLC](https://enactskill.com). Source:
-[github.com/EnactSkill/enact-plugins](https://github.com/EnactSkill/enact-plugins).
+[github.com/pauldabrowski85/enact-plugins](https://github.com/pauldabrowski85/enact-plugins).

@@ -5,7 +5,7 @@
 ## Install the marketplace
 
 ```
-/plugin marketplace add https://github.com/EnactSkill/enact-plugins.git
+/plugin marketplace add https://github.com/pauldabrowski85/enact-plugins.git
 ```
 
 ## Plugins

@@ -66,12 +66,12 @@ plugin, the manifest is correct.
 
 ```bash
 # Create the GitHub repo under the EnactSkill org (or your personal org)
-gh repo create EnactSkill/enact-plugins --public --source=. --remote=origin --push
+gh repo create pauldabrowski85/enact-plugins --public --source=. --remote=origin --push
 ```
 
 The marketplace becomes installable via:
 
 ```
-/plugin marketplace add https://github.com/EnactSkill/enact-plugins.git
+/plugin marketplace add https://github.com/pauldabrowski85/enact-plugins.git
 /plugin install motion-archaeologist@enact-plugins
 ```
